@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AddExpense</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Expense Detail : 
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-input type="text" [value]="this.name"></ion-input>
+        <!--<input type="text" #name class="add-input" />-->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Cost : 
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-input type="number" [value]="this.cost"></ion-input>
+        <!--<input type="text" #cost class="add-input" />-->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="closeModal()"><ion-icon name="add" >Save</ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

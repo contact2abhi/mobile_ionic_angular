@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Expenses
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar id="pageHead">
+      <ion-title size="large">Tab1 Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row *ngFor="let expense of expenseService.expenses">
+      <ion-col>{{expense.name}}</ion-col>
+      <ion-col>{{expense.cost}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="openModal()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
